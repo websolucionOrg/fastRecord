@@ -1,0 +1,23 @@
+@mixin Responsive($width)
+    @media ( max-width: $width)
+        @content
+
+@mixin max-width
+    width: 100%
+    max-width: 1023px
+    margin: 0 auto
+
+@mixin Crl-max-width($width)
+    width: 100%
+    max-width: $width
+    margin: 0 auto
+
+@mixin flex-C-B
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin flex-C-g($gap)
+    display: flex
+    gap: $gap
+    align-items: center

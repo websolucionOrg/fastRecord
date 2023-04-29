@@ -1,0 +1,26 @@
+@use "variables"
+@use "functions"
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    list-style-type: none
+
+body
+    #__next
+        display: flex
+        flex-direction: column 
+        justify-content: space-between
+        min-height: variables.$min-height
+  
+html
+    font-size: 62.5%
+    @include functions.Responsive(991px)
+        font-size: 55.5%
+    @include functions.Responsive(423px)
+        font-size: 50%
+    @include functions.Responsive(300px)
+        font-size: 47%

@@ -1,0 +1,13 @@
+@use '../functions/functions'
+
+.header
+    padding: 1.1rem 2rem
+    box-shadow: .1rem .1rem .1rem .1rem #11111128
+    .container
+        @include functions.max-width
+        @include functions.flex-C-B
+        nav
+            ul
+                @include functions.flex-C-g(1.5rem)
+                a
+                    font-size: 1.4rem
