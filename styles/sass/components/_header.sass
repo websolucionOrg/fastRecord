@@ -7,11 +7,13 @@
         font-weight: bold
 
 .header
-    padding: .8rem 2rem
+    padding: .6rem 2rem
     box-shadow: .1rem .1rem .1rem .1rem #11111128
     .container
         @include functions.max-width
         @include functions.flex-C-B
+        @include functions.Responsive(678px)
+            flex-direction: column
         nav
             ul
                 @include functions.flex-C-g(1.5rem)
