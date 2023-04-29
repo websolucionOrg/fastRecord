@@ -2,13 +2,19 @@
 #logo
     @include functions.flex-C-g(.5rem)
     font-size: 2rem
+    color: #fff
     span
         font-size: 1.7rem
         font-weight: bold
 
 .header
-    padding: .6rem 2rem
+    padding: 1.6rem 2rem
     box-shadow: .1rem .1rem .1rem .1rem #11111128
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 999
     .container
         @include functions.max-width
         @include functions.flex-C-B
@@ -20,3 +26,4 @@
                 a
                     font-size: 1.4rem
                     font-weight: bold
+                    color: #fff
