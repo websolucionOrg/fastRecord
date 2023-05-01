@@ -1,4 +1,4 @@
-
+@use '../functions/functions'
 .start
     background: url(/img/grafics/banner.png) no-repeat
     height: 77vh
@@ -6,6 +6,30 @@
     background-position: center center
     color: #fff
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
+    @include functions.Responsive(789px)
+        justify-content: center
+        align-items: flex-end
+    .content
+        text-shadow: .1rem .1rem .1rem #111
+        @include functions.Responsive(789px)
+            text-align: center
+        &.one
+            transform: translate(55px, -73px)
+        &.two
+            transform: translate(-55px, 83px)
+            @include functions.Responsive(789px)
+                display: none
+        h1
+            font-size: 5.5rem
+            line-height: 1.1
+        p
+            font-size: 2rem
+            font-weight: bold
+            @include functions.Crl-max-width-no-auto(300px)
+            @include functions.Responsive(789px)
+                text-align: center
+                margin: 0 auto
+
 

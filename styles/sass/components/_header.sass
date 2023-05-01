@@ -15,15 +15,36 @@
     right: 0
     left: 0
     z-index: 999
-    .container
+    nav
         @include functions.max-width
         @include functions.flex-C-B
-        @include functions.Responsive(678px)
-            flex-direction: column
-        nav
-            ul
-                @include functions.flex-C-g(1.5rem)
-                a
-                    font-size: 1.4rem
-                    font-weight: bold
-                    color: #fff
+        .navbar
+            @include functions.flex-C-g(1.5rem)
+            @include functions.Responsive(678px)
+                flex-direction: column
+                position: absolute
+                top: 100%
+                right: 0
+                left: 0
+                height: 100vh
+                padding: 2rem
+                transform: translateX(300%)
+                background: #000
+                transition: transform .8s ease
+                &.active
+                    transform: translateX(0)
+            a
+                font-size: 1.4rem
+                font-weight: bold
+                color: #fff
+                @include functions.Responsive(678px)
+                     font-size: 2rem
+
+
+.btn-menu
+    padding: 0.2rem
+    font-size: 2.6rem
+    color: #fff
+    display: none
+    @include functions.Responsive(678px)
+        display: block
