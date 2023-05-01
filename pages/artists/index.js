@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '@/components/layout/Layout'
-const index = () => {
+const Artist= () => {
   return (
-    <Layout titlePage={"Artistas"}>
+    <Layout titlePage={"Artistas"} styleHeader={"normal"} >
         <div>
             Artistas
         </div> 
@@ -11,4 +11,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Artist

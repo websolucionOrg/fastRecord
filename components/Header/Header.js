@@ -5,13 +5,13 @@ import BtnMenu from './btn'
 import useToggle from '../evennts/useToggle'
 
 
-const Header = () => {
+const Header = ({style}) => {
 
   const [toggle, handleClick] = useToggle();
 
 
   return (
-    <header className='header'>
+    <header className={`header ${style}`}>
         <nav className='container'>
             <Link href="/" passHref id='logo' > <BsDisc /> <span>FestRecord</span> </Link>
                <ul className={`navbar ${toggle ? 'active' : 'desactive'}`}>

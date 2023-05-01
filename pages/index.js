@@ -4,7 +4,7 @@ import HomePage from "@/components/Home/HomePage"
 
 export default function Home() {
   return (
-    <Layout titlePage={"Pagina Incial"}>
+    <Layout titlePage={"Pagina Incial"} >
        <HomePage />
     </Layout>
   )

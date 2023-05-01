@@ -4,7 +4,7 @@ import Script from 'next/script'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
-const Layout = ({titlePage, children}) => {
+const Layout = ({titlePage, children, styleHeader}) => {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ const Layout = ({titlePage, children}) => {
       <Script defer src='https://code.jquery.com/jquery-3.6.4.js' ></Script>
       <Script src='/js/main.js' ></Script>
       </Head>
-      <Header />
+      <Header style={styleHeader ? "normal": ""} />
       <main> {children} </main>
       <Footer />
 
