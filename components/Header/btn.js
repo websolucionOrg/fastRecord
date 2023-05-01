@@ -1,14 +1,12 @@
 import React from 'react'
 import { FaBars} from 'react-icons/fa'
 
-function handleClick() {
-   document.querySelector(".navbar").classList.toggle("active")
-  }
 
-const Btn = () => {
+const BtnMenu = ({ onClick }) => {
+
   return (
-        <FaBars onClick={handleClick} className='btn-menu' />
+        <FaBars onClick={onClick} className='btn-menu' />
   )
 }
 
-export default Btn
+export default BtnMenu
