@@ -16,7 +16,14 @@
     max-width: $width
     width: 100%
 
+@mixin fc()
+    /* display: flex, and align-items: center*/
+    display: flex
+    align-items: center
 
+@mixin ffcnm
+    display: flex
+    flex-direction: column
 
 @mixin flex-C-B
     display: flex
@@ -27,3 +34,11 @@
     display: flex
     gap: $gap
     align-items: center
+
+@mixin gridRepeat($n, $w, $g)
+    grid-template-columns: repeat($n, $w)
+    gap: $g
+@mixin fcc()
+    display: flex
+    align-items: center
+    justify-content: center

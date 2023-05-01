@@ -1,4 +1,5 @@
 @use '../functions/functions'
+@use '../functions/variables'
 #logo
     @include functions.flex-C-g(.5rem)
     font-size: 2rem
@@ -8,6 +9,7 @@
         font-weight: bold
 
 .header
+    background: variables.$linear-gradient
     padding: 1.6rem 2rem
     box-shadow: .1rem .1rem .1rem .1rem #11111128
     position: fixed

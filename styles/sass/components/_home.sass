@@ -1,6 +1,7 @@
 @use '../functions/functions'
+@use '../functions/variables'
 .start
-    background: url(/img/grafics/banner.png) no-repeat
+    background: url(/img/banner.png) no-repeat
     height: 77vh
     background-size: cover
     background-position: center center
@@ -15,6 +16,7 @@
         text-shadow: .1rem .1rem .1rem #111
         @include functions.Responsive(789px)
             text-align: center
+            transform: translate(0,-103px) !important
         &.one
             transform: translate(65px, -103px)
         &.two
@@ -32,4 +34,57 @@
                 text-align: center
                 margin: 0 auto
 
+.services
+    .container
+        @include functions.max-width
+        display: grid
+        @include functions.gridRepeat(3,0.78fr, 2rem)
+        @include functions.Responsive(991px)
+            @include functions.gridRepeat(2,0.78fr, 2rem)
+        @include functions.Responsive(659px)
+            @include functions.gridRepeat(1,100%, 2rem)
+        .box  
+            background: variables.$linear-gradient
+            padding: 3.5rem
+            box-shadow: 2px 1px 1px 3px rgb(17 17 17 / 16%)
+            @include functions.flex-C-g(2rem)
+            gap: 1.2rem
+            border-radius: .4rem
+            transition: transform .7s ease
+            &:hover
+                i
+                    transform: scale(1.2)
+            i,h2,p
+                color: #fff
+            i
+                font-size: 5rem
+            h2
+                font-size: 1.7rem
+                margin-bottom: 1rem
+            p
+                font-size: 1.4rem
+                font-weight: 600
 
+.descriptionsHome
+    .container
+        @include functions.max-width
+        @include functions.ffcnm
+        gap: 2rem
+        .cardHome
+            display: grid
+            @include functions.gridRepeat(2,0.78fr, 2rem)
+            @include functions.Responsive(789px)
+                @include functions.gridRepeat(1, 100%, 2rem)
+            &:nth-child(even)
+                direction: rtl
+            .image
+                height: 400px
+            .content
+                padding-top: 2.5rem
+                h2
+                    font-size: 3.3rem
+                    margin-bottom: 1.4rem
+                    color: variables.$rocho
+                p
+                    font-size: 1.4rem
+                    margin-bottom: 1.6rem

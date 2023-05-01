@@ -1,0 +1,43 @@
+@use '../functions/functions'
+@use '../functions/variables'
+
+.footerMain
+    padding: 2rem
+    background: #2b3035
+    .container
+        @include functions.flex-C-B
+        @include functions.max-width
+        @include functions.Responsive(850px)
+            @include functions.ffcnm
+            justify-content: space-between
+            text-align: center
+        .descSite
+            a
+                font-size: 3rem
+            p
+                @include functions.Crl-max-width-no-auto(250px)
+                font-size: 1.1rem
+                margin-bottom: .7rem
+        span
+            font-size: .9rem
+
+        .socialMedia
+            .containerIcons
+                @include functions.fcc()
+                margin-bottom: 0.8rem
+                a
+                    font-size: 1.6rem
+                    margin-left: 0.7rem
+            .boreder
+                height: 0.1rem
+                @include functions.Crl-max-width-no-auto(200px)
+                background: #8C939A
+                margin-bottom: 0.6rem
+
+
+.footerMain
+    a, p, span
+        color: #8C939A
+        &:hover
+            color: #fff        
+        
