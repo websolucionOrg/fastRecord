@@ -6,9 +6,9 @@ const HomePage = () => {
     <>
        <section className='start'>
          <div className='content one'>
-          <h1>Fast Record</h1>
-          <p>Tudo pela evolução da arte musical
-            e todos artistas em particular
+          <h1>Tudo pela</h1>
+          <p>Evolução da arte musical
+            e o interterimento Angolano
           </p>
          </div>
 
